@@ -1,0 +1,29 @@
+{
+  "name": "omah",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^3.2.4",
+    "duplexer": "^0.1.2",
+    "event-stream": "^4.0.1",
+    "from": "^0.1.7",
+    "lodash.assign": "^4.2.0",
+    "map-stream": "^0.0.7",
+    "mingo": "^6.4.1",
+    "pause-stream": "^0.0.11",
+    "save": "^2.9.0",
+    "split": "^1.0.1",
+    "stream-combiner": "^0.2.2",
+    "through": "^2.3.8"
+  },
+  "devDependencies": {
+    "sass": "^1.63.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Laksa",
+  "license": "ISC"
+}
