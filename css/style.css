@@ -1,0 +1,163 @@
+/* 
+COLORS:
+
+LIGHT GREEN : #7ed56f
+MEDIUM GREEN : #55C57A
+DARK GREEN : #28B485
+
+
+*/
+/* Abstract */
+@use 'sass:math';
+/*
+--> Media Query Rule <--
+
+0px-600px: phone
+600px-900px: tablet  portrait
+900px-1200px: tablet landscape
+1200 - 1800 normal style (dekstop first)
+1800px + : big dekstop
+ 
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-dekstop
+
+order: base + typography > general layout + grid > page layout > components
+
+1em == 16px
+*/
+/* Base */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /*
+    semua ukuran rem pada layout ditentukan pada font-size yang telah
+    dideklarasikan di awal, seperti pada kode dibawah ini, font-size ditentukan
+    dengan 62.5% yang berarti 10px, maka 1rem akan dideklarasikan dengan nilai 10px
+    pada seluruh layout yang kita buat
+    */
+  scroll-behavior: smooth; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+::selection {
+  background-color: #1B2021;
+  color: #fff; }
+
+/* Fade Left Animation */
+@keyframes moveinleft {
+  /* Animation Start */
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  /* Animation End */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+/* Fade Right Animation */
+@keyframes moveinright {
+  /* Animation Start */
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  /* Animation End */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+/* Button Animation */
+@keyframes moveinbottom {
+  /* Animation Start */
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  /* Animation End */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+body {
+  font-family: "Poppins",  sans-serif;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777; }
+
+.heading-primary {
+  font-size: 4rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 6rem;
+  color: #1B2021; }
+
+.heading-secondary {
+  font-size: 2.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 3.75rem;
+  color: #1B2021; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      padding: 0 !important; } }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+/* Components */
+/* Layout */
+/* Pages */
+.home__latest-wrapper {
+  display: flex;
+  justify-content: space-between; }
+  .home__latest-wrapper-left {
+    display: flex;
+    gap: 3.5rem; }
+
+.home__heading-description {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center; }

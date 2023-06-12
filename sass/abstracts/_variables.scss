@@ -1,30 +1,29 @@
 
 //  Colors
-$color-primary:#55C57A;
-$color-primary-light:#7ed56f;
-$color-primary-dark:#28B485;
+$color-primary:#1B2021;
+$color-secondary:#828282;
+$color-tertiary:#F58634;
 
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
-
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa; 
-
-
-$color-gray-light-1: #f7f7f7;
-$color-gray-light-2: #eee;
-
+$color-gray-light: #f7f7f7;
 $color-gray-dark:#777;
-$color-gray-dark-2:#999;
-$color-gray-dark-3:#333;
-
 
 $color-white: #fff;
 $color-black:#000;
 
-//Default Font
-$default-font-size: 1.6rem;
+// Font Size
+$font-size-base: toRem(16);
+$font-size-md: toRem(20);
+$font-size-lg: toRem(24);
+$font-size-xl: toRem(32);
 
+$font-size-header: toRem(40);
+$font-size-link: toRem(24);
+
+
+// Font Weight
+$font-weight-light : 400;
+$font-weight-semibold : 500;
+$font-weight-bold : 600;
 
 // Grid 
 $grid-width:114rem;
