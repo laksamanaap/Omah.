@@ -1,3 +1,20 @@
+.btn {
+    border-radius: unset !important;
+    border-color: unset !important;
+
+    &:hover {
+        background-color: $color-tertiary-dark;
+    }
+}
+
+.btn-primary {
+    font-size: $font-size-base;
+    color: $color-white;
+    background-color: $color-tertiary;
+    padding: toRem(19) toRem(43);
+
+}
+
 // .btn {
 //     &,
 //     &:link,

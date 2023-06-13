@@ -1,3 +1,32 @@
+.navbar {
+
+    // &.navbar-expand-lg {
+    //     padding: toRem(0) 0 toRem(48) 0;
+    // }
+
+    &-brand {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semibold;
+
+        &-dot {
+            color: $color-tertiary;
+            width: toRem(6);
+            height: toRem(6);
+        }
+
+        &::after {
+            content: ".";
+            color: $color-tertiary;
+            font-size: toRem(36);
+        }
+    }
+
+    &-nav {
+        gap: toRem(56) !important;
+    }
+}
+
+
 // .header {
 //     height: 85vh; 
 //     background-image: linear-gradient(

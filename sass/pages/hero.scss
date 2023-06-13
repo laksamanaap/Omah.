@@ -1,0 +1,46 @@
+// Test SASS
+
+.hero {
+margin-top: toRem(50);
+display: flex;
+flex-direction: column;
+gap: toRem(56);
+
+&__header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 136px;
+
+    &-left {
+        font-weight: $font-weight-semibold;
+        font-size: toRem(60);
+        color: $color-primary;
+        min-width: toRem(651);
+    }
+
+    &-right {
+        display: flex;
+        gap: 21px;
+        justify-content: flex-start;
+
+        &-desc {
+            font-size: 20px;
+            letter-spacing: 0.01em;
+            line-height: 34px;
+            font-weight: 400;
+            color: #828282;
+        }
+
+        &-line {
+            margin-bottom: toRem(3);
+        }
+
+    }
+
+}
+
+}
+
