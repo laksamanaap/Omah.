@@ -12,12 +12,6 @@ body {
   padding: 3rem 8.4375rem !important; }
 
 html {
-  /*
-    semua ukuran rem pada layout ditentukan pada font-size yang telah
-    dideklarasikan di awal, seperti pada kode dibawah ini, font-size ditentukan
-    dengan 62.5% yang berarti 10px, maka 1rem akan dideklarasikan dengan nilai 10px
-    pada seluruh layout yang kita buat
-    */
   scroll-behavior: smooth; }
   @media only screen and (max-width: 75em) {
     html {
