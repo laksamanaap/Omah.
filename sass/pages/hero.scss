@@ -1,46 +1,95 @@
-// Test SASS
-
 .hero {
-margin-top: toRem(50);
-display: flex;
-flex-direction: column;
-gap: toRem(56);
-
-&__header-wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    gap: 136px;
+    flex-direction: column;
+    position: relative;
+    margin-top: toRem(50);
+    gap: toRem(56);
 
-    &-left {
-        font-weight: $font-weight-semibold;
-        font-size: toRem(60);
-        color: $color-primary;
-        min-width: toRem(651);
-    }
+    &__header-wrapper {
+        @include flex(row, center);
+        padding: 0px;
+        gap: toRem(51);
 
-    &-right {
-        display: flex;
-        gap: 21px;
-        justify-content: flex-start;
-
-        &-desc {
-            font-size: 20px;
-            letter-spacing: 0.01em;
-            line-height: 34px;
-            font-weight: 400;
-            color: #828282;
+        &-left {
+            color: $color-primary;
+            font-weight: $font-weight-semibold;
+            font-size: toRem(60);
+            min-width: toRem(651);
         }
 
-        &-line {
-            margin-bottom: toRem(3);
+        &-right {
+            @include flex(row, flex-start);
+            gap: toRem(21);
+
+            &-desc {
+                font-size: toRem(20);
+                font-weight: $font-weight-base;
+                color: $color-secondary;
+            }
+
+            &-line {
+                color: $color-tertiary;
+                margin-bottom: toRem(3);
+            }
+
+        }
+    }
+
+    &__image {
+        &-wrapper {
+            position: absolute;
+            width: 100%;
+            right: 0;
+            bottom: 0;
+            left: toRem(-134);
+            top: toRem(300);
+            width: toRem(1305);
+            height: fit-content;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: row;
+            gap: toRem(64);
+
+            &-wrapper {
+                @include flex(row, center);
+                position: absolute;
+                background: $color-white;
+                box-shadow: 0 toRem(12) toRem(45) 0 rgba(86, 86, 86, 0.10);
+                right: 0;
+                bottom: toRem(-28.5);
+                padding: toRem(16) toRem(16) toRem(16) toRem(40);
+                gap: toRem(112);
+            }
+
+            &-item {
+                @include flex(column);
+
+                &--header {
+                    color: $color-primary;
+                    font-weight: $font-weight-semibold;
+                    margin-bottom: unset;
+                }
+
+                &--subheader {
+                    color: $color-secondary;
+                    font-weight: $font-weight-normal;
+                    margin-bottom: unset;
+                }
+            }
+
+            &-action {
+                max-width: toRem(168);
+            }
         }
 
     }
 
-}
+
 
 }
-
